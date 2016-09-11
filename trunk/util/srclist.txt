@@ -1,0 +1,61 @@
+# $Id$
+# Files which we keep in sync from other places.
+# This is input for the script config/srclist-update in the gnulib
+# project on savannah, and the wrapper srclist-txi in this directory.
+# 
+# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2011, 2012, 2013,
+# 2014, 2015
+# Free Software Foundation, Inc.
+#
+# This file is free software; as a special exception the author gives
+# unlimited permission to copy and/or distribute it, with or without
+# modifications, as long as this notice is preserved.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+doc/texinfo.tex					build-aux
+
+
+# Maintained in Emacs, which uses doclicense.texi instead of the usual
+# fdl.texi; seems cleaner to change it than to have two copies of the FDL.
+$EMACSSRC/doc/misc/info.texi			doc	doclicense
+
+
+$GETTEXT/gettext-runtime/ABOUT-NLS		.
+#
+$GETTEXT/gettext-tools/po/Makefile.in.in	po_document
+# must merge by hand, not just copy, until .twjr is supported by gettext.
+#$GETTEXT/gettext-tools/po/Makefile.in.in	po
+$GETTEXT/gettext-tools/po/Makevars.template	po
+$GETTEXT/gettext-tools/po/Rules-quot		po
+$GETTEXT/gettext-tools/po/boldquot.sed		po
+$GETTEXT/gettext-tools/po/en@boldquot.header	po
+$GETTEXT/gettext-tools/po/en@quot.header	po
+$GETTEXT/gettext-tools/po/insert-header.sin	po
+$GETTEXT/gettext-tools/po/quot.sed		po
+$GETTEXT/gettext-tools/po/remove-potcdate.sin	po
+$GETTEXT/gettext-tools/po/remove-potcdate.sin	po_document
+
+
+$GNULIBSRC/build-aux/compile		build-aux
+$GNULIBSRC/build-aux/config.guess	build-aux
+$GNULIBSRC/build-aux/config.rpath	build-aux
+$GNULIBSRC/build-aux/config.sub		build-aux
+$GNULIBSRC/build-aux/depcomp		build-aux
+$GNULIBSRC/build-aux/install-sh		build-aux
+$GNULIBSRC/build-aux/mdate-sh		build-aux
+#
+$GNULIBSRC/doc/COPYINGv3		./COPYING
+$GNULIBSRC/doc/INSTALL			./INSTALL.generic
+$GNULIBSRC/doc/fdl.texi			doc
+
+
+# Should only need to be updated after major Automake releases.
+$AUTOMAKE/tap-driver.sh			build-aux
+$AUTOMAKE/test-driver			build-aux
+$AUTOMAKE/missing			build-aux
+
+
+$GSASL/doc/gdoc 			contrib
